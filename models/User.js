@@ -42,9 +42,17 @@ User.init(
           return newUserData
         });
       }
-    }
+    },
+        
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'user'
   }
+  
 );
+
 
 
 module.exports = User;
@@ -87,11 +95,5 @@ User.init(
       }
     }
   },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'user'
-  }
+
 );
